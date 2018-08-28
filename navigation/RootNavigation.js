@@ -1,32 +1,7 @@
 import React from 'react';
 import { Notifications } from 'expo';
-import { createStackNavigator, createSwitchNavigator } from 'react-navigation';
-import SignupScreen from '../screens/signup/SignupScreen';
-import NumberRegisterScreen from '../screens/signup/NumberRegisterScreen';
-import NewProfileScreen from '../screens/signup/NewProfileScreen';
-import TestScreen from '../screens/signup/TestScreen';
-import CameraScreen from '../screens/signup/CameraScreen';
-import MainTabNavigator from './MainTabNavigator';
+import MainNavigator from './MainNavigator';
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
-
-const RegisterNavigator = createStackNavigator({
-  // You could add another route here for authentication.
-  // Read more at https://reactnavigation.org/docs/en/auth-flow.html  
-  Signup: SignupScreen,
-  NumberRegister: NumberRegisterScreen,
-  Test: TestScreen,
-  NewProfile: NewProfileScreen,
-  Camera: CameraScreen,  
-},
-{
-    headerMode: 'screen',
-    initialRouteName: 'Main'  
-});
-
-const AppNavigator = createSwitchNavigator({
-  Main: MainTabNavigator,
-  RegisterNavigator
-});
 
 export default class RootNavigation extends React.Component {
   componentDidMount() {
@@ -38,7 +13,7 @@ export default class RootNavigation extends React.Component {
   }
 
   render() {
-    return <AppNavigator />;
+    return <MainNavigator />;
   }
 
   _registerForPushNotifications() {

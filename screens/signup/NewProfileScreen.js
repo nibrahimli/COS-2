@@ -24,7 +24,7 @@ export default class NewProfileScreen extends React.Component {
           backgroundColor: 'white'
       },
       headerRight: (
-        <Text style={styles.nextButton} onPress={() => navigation.navigate('Main')}>{I18n.t('next')}</Text>
+        <Text style={styles.nextButton} onPress={() => navigation.navigate('App')}>{I18n.t('next')}</Text>
       ),
     });
 
@@ -89,7 +89,7 @@ export default class NewProfileScreen extends React.Component {
                   showSparator={false}
                 >
                   <ActionSheetItem
-                    text="Share"
+                    text="Galery"
                     value="item1"
                     selectedIcon={checkedIcon}
                     icon={
@@ -98,7 +98,7 @@ export default class NewProfileScreen extends React.Component {
                     onPress={this._pickImage}
                   />
                   <ActionSheetItem
-                    text="Delete"
+                    text="Camera"
                     value="item2"
                     selectedIcon={checkedIcon}
                     icon={
