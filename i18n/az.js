@@ -4,7 +4,9 @@ const texts = {
     app_description: 'Baglamalarinizi dunyanin her yerine gonderin',
     number: 'Nömrə',
     registration: 'Qeydiyyat',
-    next: 'DAVAM'
+    next: 'DAVAM',
+    camera: 'Kamera',
+    gallery: 'Qalerya',
   };
   
   const states = {
